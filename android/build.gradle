@@ -128,4 +128,5 @@ dependencies {
   api 'com.facebook.react:react-native:+'
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
   implementation fileTree(include: ['*.aar'], dir: 'libs')
+  api(name: 'libs/sifir_android', ext: 'aar')
 }
