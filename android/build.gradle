@@ -123,9 +123,15 @@ repositories {
 
 def kotlin_version = getExtOrDefault('kotlinVersion')
 
+repositories {
+      flatDir {
+              dirs 'libs'
+       }
+ }
+ 
 dependencies {
   // noinspection GradleDynamicVersion
   api 'com.facebook.react:react-native:+'
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-  api(fileTree("libs") { include("*.aar") })
+  compile(name:'sifir_android', ext:'aar')
 }
